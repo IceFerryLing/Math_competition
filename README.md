@@ -31,9 +31,15 @@
 
 ## ASCII 艺术（动态版）
 
-> 通过 SVG 渐变动画展示（在大多数 Markdown/HTML 预览器中可见）。
+> GitHub 会禁用 SVG 动画，建议在 GitHub 上查看 GIF 版；在本地或支持动画的预览器中可使用 SVG。
 
-![动态 ASCII 艺术](./ascii-animated.svg)
+**GitHub 友好（GIF）**
+
+![动态 ASCII GIF](./ascii-animated.gif)
+
+**本地预览（SVG 动画）**
+
+![动态 ASCII SVG](./ascii-animated.svg)
 
 ## 目录与文件数概览（截至 2025-12-30）
 
