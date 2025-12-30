@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="220" viewBox="0 0 760 220" role="img" aria-label="Animated ASCII banner">
+  <defs>
+    <linearGradient id="grad" x1="-200" y1="0" x2="200" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ff6b6b" />
+      <stop offset="50%" stop-color="#feca57" />
+      <stop offset="100%" stop-color="#48dbfb" />
+      <animate attributeName="x1" from="-200" to="960" dur="6s" repeatCount="indefinite" />
+      <animate attributeName="x2" from="200" to="1360" dur="6s" repeatCount="indefinite" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="0" stdDeviation="2" flood-color="#111" flood-opacity="0.6" />
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="#0b0b10" rx="8" ry="8" />
+  <g font-family="'Fira Code', 'Cascadia Code', Consolas, 'Courier New', monospace" font-size="14" fill="url(#grad)" filter="url(#shadow)" xml:space="preserve">
+    <tspan x="20" y="30">╔══════════════════════════════════════════════════╗</tspan>
+    <tspan x="20" dy="16">║                                                  ║</tspan>
+    <tspan x="20" dy="16">║   ███╗   ███╗ █████╗ ████████╗██╗  ██╗           ║</tspan>
+    <tspan x="20" dy="16">║   ████╗ ████║██╔══██╗╚══██╔══╝██║  ██║           ║</tspan>
+    <tspan x="20" dy="16">║   ██╔████╔██║███████║   ██║   ███████║           ║</tspan>
+    <tspan x="20" dy="16">║   ██║╚██╔╝██║██╔══██║   ██║   ██╔══██║           ║</tspan>
+    <tspan x="20" dy="16">║   ██║ ╚═╝ ██║██║  ██║   ██║   ██║  ██║           ║</tspan>
+    <tspan x="20" dy="16">║   ╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝           ║</tspan>
+    <tspan x="20" dy="16">║                                                  ║</tspan>
+    <tspan x="20" dy="16">║   ███████╗████████╗ █████╗ ██████╗ ████████╗     ║</tspan>
+    <tspan x="20" dy="16">║   ██╔════╝╚══██╔══╝██╔══██╗██╔══██╗╚══██╔══╝     ║</tspan>
+    <tspan x="20" dy="16">║   ███████╗   ██║   ███████║██████╔╝   ██║        ║</tspan>
+    <tspan x="20" dy="16">║   ╚════██║   ██║   ██╔══██║██╔══██╗   ██║        ║</tspan>
+    <tspan x="20" dy="16">║   ███████║   ██║   ██║  ██║██║  ██║   ██║        ║</tspan>
+    <tspan x="20" dy="16">║   ╚══════╝   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝        ║</tspan>
+    <tspan x="20" dy="16">║                                                  ║</tspan>
+    <tspan x="20" dy="16">╚══════════════════════════════════════════════════╝</tspan>
+  </g>
+</svg>
