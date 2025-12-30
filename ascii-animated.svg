@@ -20,7 +20,7 @@
     </filter>
 
     <style>
-      /* CSS 级别的渐变动画，兼容禁用 SMIL 的环境 */
+      /* 渐变颜色动画：兼容禁用 SMIL 的环境 */
       @keyframes shift {
         0%   { stop-color: #ff6b6b; }
         33%  { stop-color: #feca57; }
@@ -28,10 +28,82 @@
         100% { stop-color: #ff6b6b; }
       }
       stop { animation: shift 6s linear infinite; }
+
+      /* 粒子漂浮效果 */
+      @keyframes float {
+        0%   { transform: translate(0, 0) scale(0.6); opacity: 0; }
+        10%  { opacity: 0.8; }
+        50%  { opacity: 0.5; }
+        100% { transform: translate(60px, -80px) scale(1.2); opacity: 0; }
+      }
+      .particle { fill: #48dbfb; opacity: 0.35; animation: float 7s linear infinite; }
+      .particle.alt { fill: #feca57; animation-duration: 8s; }
+      .particle.hot { fill: #ff6b6b; animation-duration: 9s; }
+
+      /* 烟花效果 */
+      @keyframes burst {
+        0%   { transform: scale(0); opacity: 0.9; }
+        60%  { opacity: 0.8; }
+        100% { transform: scale(1.3); opacity: 0; }
+      }
+      .firework circle {
+        fill: none;
+        stroke-width: 2;
+        animation: burst 1.8s ease-out infinite;
+        transform-origin: center;
+      }
+      .firework.fw1 circle { stroke: #48dbfb; animation-delay: -0.4s; }
+      .firework.fw2 circle { stroke: #feca57; animation-delay: -0.9s; }
+      .firework.fw3 circle { stroke: #ff6b6b; animation-delay: -1.3s; }
+      .firework.fw4 circle { stroke: #5f27cd; animation-delay: -1.7s; }
+      .firework circle:nth-child(2) { animation-delay: calc(-1s + 0.2s); }
+      .firework circle:nth-child(3) { animation-delay: calc(-1s + 0.4s); }
+      .firework circle:nth-child(4) { animation-delay: calc(-1s + 0.6s); }
     </style>
   </defs>
 
   <rect width="100%" height="100%" fill="#0b0b10" rx="8" ry="8" />
+
+  <!-- 烟花层 -->
+  <g id="fireworks">
+    <g class="firework fw1" transform="translate(140 140)">
+      <circle r="12" />
+      <circle r="20" />
+      <circle r="28" />
+      <circle r="36" />
+    </g>
+    <g class="firework fw2" transform="translate(360 110)">
+      <circle r="10" />
+      <circle r="18" />
+      <circle r="26" />
+      <circle r="34" />
+    </g>
+    <g class="firework fw3" transform="translate(580 150)">
+      <circle r="12" />
+      <circle r="22" />
+      <circle r="30" />
+      <circle r="40" />
+    </g>
+    <g class="firework fw4" transform="translate(480 240)">
+      <circle r="10" />
+      <circle r="18" />
+      <circle r="26" />
+      <circle r="34" />
+    </g>
+  </g>
+
+  <!-- 粒子层：使用 CSS 动画漂浮 -->
+  <g id="particles">
+    <circle class="particle" cx="120" cy="260" r="3" style="animation-delay: -1s" />
+    <circle class="particle alt" cx="240" cy="230" r="2.5" style="animation-delay: -2.5s" />
+    <circle class="particle hot" cx="380" cy="250" r="3.5" style="animation-delay: -3.2s" />
+    <circle class="particle" cx="520" cy="240" r="2.8" style="animation-delay: -0.8s" />
+    <circle class="particle alt" cx="660" cy="220" r="3.2" style="animation-delay: -4.1s" />
+    <circle class="particle hot" cx="200" cy="200" r="2.4" style="animation-delay: -1.7s" />
+    <circle class="particle" cx="320" cy="210" r="3.0" style="animation-delay: -2.9s" />
+    <circle class="particle alt" cx="440" cy="190" r="2.6" style="animation-delay: -0.3s" />
+    <circle class="particle hot" cx="560" cy="205" r="3.1" style="animation-delay: -3.8s" />
+  </g>
 
   <text x="20" y="30" font-family="'Fira Code', 'Cascadia Code', Consolas, 'Courier New', monospace" font-size="14" fill="url(#grad)" filter="url(#shadow)" xml:space="preserve">
     <tspan x="20" y="30">╔══════════════════════════════════════════════════╗</tspan>
