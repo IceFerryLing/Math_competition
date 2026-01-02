@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="760" height="320" viewBox="0 0 760 320" role="img" aria-label="Animated ASCII banner">
   <defs>
-    <!-- 渐变定义：同时支持 SMIL 与 CSS 动画，提升兼容性 -->
+    <!-- 渐变定义-->
     <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#ff6b6b">
         <animate attributeName="stop-color" values="#ff6b6b;#feca57;#48dbfb;#ff6b6b" dur="6s" repeatCount="indefinite" />
@@ -11,7 +11,7 @@
       <stop offset="100%" stop-color="#48dbfb">
         <animate attributeName="stop-color" values="#48dbfb;#ff6b6b;#feca57;#48dbfb" dur="6s" repeatCount="indefinite" />
       </stop>
-      <!-- 平移渐变，部分预览器支持 SMIL -->
+      <!-- 平移渐变-->
       <animate attributeName="gradientTransform" attributeType="XML" type="translate" from="-0.2 0" to="1.2 0" dur="6s" repeatCount="indefinite" />
     </linearGradient>
 
@@ -20,7 +20,7 @@
     </filter>
 
     <style>
-      /* 渐变颜色动画：兼容禁用 SMIL 的环境 */
+      /* 渐变颜色动画 */
       @keyframes shift {
         0%   { stop-color: #ff6b6b; }
         33%  { stop-color: #feca57; }
